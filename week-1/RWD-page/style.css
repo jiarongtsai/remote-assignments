@@ -1,0 +1,86 @@
+/* universal set and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+a:link,
+a:hover {
+  text-decoration: none;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-logo {
+  margin: 0 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+/* welcome */
+.welcome {
+  background-color: beige;
+  height: 200px;
+}
+
+.welcome h1 {
+  line-height: 200px;
+}
+
+/* main content */
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.main h2 {
+  margin: 2rem 0;
+}
+
+.content-box-wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  height: 100px;
+  min-width: 400px;
+  /* flex: 1 80%; */
+  margin: 0.5rem;
+  background-color: darkgrey;
+}
+
+button {
+  margin: 2rem;
+  padding: 0.75rem;
+}
+
+footer {
+  height: 50px;
+}
+
+ /* @media screen and (min-width: 500px) {
+  .content-box {
+    
+  }
+}   */
