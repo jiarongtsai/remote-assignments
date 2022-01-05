@@ -68,7 +68,10 @@ nav {
   /* flex: 1 80%; */
   margin: 0.5rem;
   background-color: darkgrey;
+
+  line-height: 100px;
 }
+
 
 button {
   margin: 2rem;
@@ -79,8 +82,43 @@ footer {
   height: 50px;
 }
 
- /* @media screen and (min-width: 500px) {
-  .content-box {
-    
+/* hamburger */
+label {
+    display: none;
+}
+
+#hamburger {
+    display: none;
+}
+
+
+
+ @media (max-width: 800px) {
+  label {
+    display: initial;
+    margin: 0 1rem;
+    font-size: 2rem;
   }
-}   */
+
+  nav {
+      height: auto;
+      flex-wrap: wrap;
+  }
+  .nav-logo {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .nav-links { 
+      flex-wrap: wrap;
+  }
+
+  .nav-item {
+      width: 100vw;
+      height: 40px;
+  }
+
+#hamburger:checked ~ ul{
+      display: none;
+  }
+} 
