@@ -13,6 +13,11 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* navbar */
 nav {
   display: flex;
@@ -50,10 +55,12 @@ nav {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+    flex: 1;
 }
 
 .content h2 {
   margin: 2rem 0;
+
 }
 
 .content-box-wrapper {
@@ -61,8 +68,7 @@ nav {
   flex-flow: row wrap;
   width: 90vw;
   max-width: 1200px;
-  /* justify-content: center;
-  align-items: center; */
+
 }
 
 .content-box {
