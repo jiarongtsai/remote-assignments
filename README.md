@@ -3,4 +3,4 @@
 **week-1 RWD page**
 
 
-Check out [here](https://jiarongtsai.github.io/remote-assignments/) 
+- Please Check out the assignment [here](https://jiarongtsai.github.io/remote-assignments/). 
