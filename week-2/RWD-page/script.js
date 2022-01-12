@@ -7,10 +7,15 @@ const contentBoxWrapper_fixed = document.querySelectorAll('.content-box-wrapper'
 const addButton = document.querySelector('#addContentBox')
 const contentBoxWrapper = document.querySelector('.content-box-wrapper')
 
-let newContentBox, newText, count, showContent, trackWelcome
+const toggleNavButton = document.querySelector('label')
+const navbar = document.querySelector('.nav-links')
+console.log(navbar)
+
+let newContentBox, newText, count, showContent, trackWelcome, hamburgerIcon
 count = 5
 showContent = false
 trackWelcome = true
+hamburgerIcon = true
 
 //rq 1
 function changeText(){
@@ -24,6 +29,18 @@ function changeText(){
 }
 
 //rq 2
+
+function toggleNavbar(){
+    navbar.classList.toggle('display-none')
+    
+    if(hamburgerIcon){
+        toggleNavButton.innerHTML = "&times;"
+        hamburgerIcon = false
+    }else{
+        toggleNavButton.innerHTML = "&equiv;"
+        hamburgerIcon = true
+    }
+}
 
 //rq 3
 function toggleContentBox(){
@@ -60,3 +77,4 @@ function addContentBox(){
 welcomeDiv.addEventListener('click', changeText)
 showButton.addEventListener('click', toggleContentBox)
 addButton.addEventListener('click', addContentBox)
+toggleNavButton.addEventListener('click', toggleNavbar)
