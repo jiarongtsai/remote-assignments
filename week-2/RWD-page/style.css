@@ -18,6 +18,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
 /* navbar */
 nav {
   display: flex;
@@ -36,21 +43,25 @@ nav {
 }
 
 .nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  position: fixed;
+  top: 60px;
+  right: 0;
+
+  width: 40vw;
+  height: 100vh;
+  
+  background-color: white;
+  opacity: .9;
 }
 
 .nav-item {
   list-style-type: none;
-  margin: 0 1rem;
-  /* mobile */
-  width: 100vw;
-  height: 40px;
+  margin: 2rem 1rem;
 }
 
 /* welcome */
 .welcome {
+  margin-top: 60px;
   background-color: beige;
   height: 200px;
 }
@@ -90,7 +101,19 @@ button {
   padding: 0.75rem;
 }
 
+/* for show more content box */
+hr { 
+  width: 90%;
+  margin: 0 auto;
+}
+/* usability !!! */
+.display-none {
+  display: none;
+}
+
+
 footer {
+  margin-top: 2rem;
   height: 50px;
 }
 
@@ -105,14 +128,10 @@ label {
   display: none;
 }
 
-#hamburger:checked ~ .nav-links {
-  display: none;
-}
 
 @media (min-width: 500px){
   .content-box-wrapper {
     flex-flow: row wrap;
-    /* flex-basis: 230px;  */
   }
   .content-box {
     flex: 1 1 200px; 
@@ -129,7 +148,14 @@ label {
   label {
     display: none;
   }
+  .nav-links {
+    /* reset all CSS */
+    all: revert;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   .nav-item {
     list-style-type: none;
     margin: 0 1rem;

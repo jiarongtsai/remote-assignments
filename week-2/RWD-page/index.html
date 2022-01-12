@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RWD Page</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/RWD-page/style.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="/" class="nav-logo">Web Title / Logo</a>
 
-            <input type="checkbox" id="hamburger" checked>
+            <input type="checkbox" id="hamburger">
             <label for="hamburger">&equiv;</label>
 
-            <ul class="nav-links">
+            <ul class="nav-links display-none">
                 <li class="nav-item"><a href="/">item 1</a></li>
                 <li class="nav-item"><a href="/">item 2</a></li>
                 <li class="nav-item"><a href="/">item 3</a></li>
@@ -44,10 +44,27 @@
                 <p>Content Box 4</p>
             </div>
         </div>
-        <button>Call to Action</button>
+        <button id = "addContentBox">Add a Content Box</button>
+        <hr>
+        <button id = "showContentBox">Show More Boxes</button>
+        <div class="content-box-wrapper display-none">
+            <div class="content-box">
+                <p>Content Box 1</p>
+            </div>
+            <div class="content-box">
+                <p>Content Box 2</p>
+            </div>
+            <div class="content-box">
+                <p>Content Box 3</p>
+            </div>
+            <div class="content-box">
+                <p>Content Box 4</p>
+            </div>
+        </div>
     </section>
     <footer>
         <p><small>Developed with love by Bella &copy 2022</small></p>
     </footer>
+    <script src="/RWD-page/script.js"></script>
 </body>
 </html>
