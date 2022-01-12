@@ -90,7 +90,18 @@ button {
   padding: 0.75rem;
 }
 
+/* for show more content box */
+hr { 
+  width: 90%;
+  margin: 0 auto;
+}
+.display-none {
+  display: none;
+}
+
+
 footer {
+  margin-top: 2rem;
   height: 50px;
 }
 
