@@ -2,6 +2,8 @@ const express = require('express')
 
 const app = express()
 
+app.use(express.static('public'))
+
 app.get('/', (req, res)=>{
     res.send('Hello, My Server!')
 })
@@ -16,7 +18,7 @@ app.get('/getData', (req, res)=>{
         res.send('Lack of Parameter')
     if(num > 0){
         let sum =0
-        for(let i = 0; i<num; i++){
+        for(let i = 0; i<=num; i++){
             sum+=i
         }
         //res.send only accept string data
