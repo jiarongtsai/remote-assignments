@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        title NAME 
+    body
+        if name 
+            h1 Hey, #{name}
+        else
+            form(action="/trackName", method="post")
+                label(for="name") 
+                    h1 Enter your name: 
+                input(type="text", name="name" id="name")
+                button Submit   
+            br
+        a(href="/") Back   
+    footer 
+        p :)

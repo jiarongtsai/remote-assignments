@@ -9,6 +9,8 @@
   "author": "Bella Tsai",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.2",
     "pug": "^3.0.2"
   }
