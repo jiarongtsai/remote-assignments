@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content
+    h1 #{message} 
+    //- "h1= message" and #{message} have same output
+    if message === 'Lack of Parameter'
+        p hint: please make sure you enter a number
+    else if message === 'Wrong Parameter'
+        p hint: please enter a 'number'
+    a(href='/sum.html') Play Again

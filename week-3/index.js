@@ -1,32 +1,45 @@
 const express = require('express')
+const pug = require('pug')
 
 const app = express()
+
+app.set('view engine', 'pug')
 
 app.use(express.static('public'))
 
 app.get('/', (req, res)=>{
-    res.send('Hello, My Server!')
+    res.render('index')
 })
 
 app.get('/getData', (req, res)=>{
     //get the query sting
     const input = req.query.number
     const num = Number(input)
+    //variable for store data
+    let message =''
     
     //main logic
     if(!input)
-        res.send('Lack of Parameter')
-    if(num > 0){
+        message = 'Lack of Parameter'
+    else if(num > 0){
         let sum =0
         for(let i = 0; i<=num; i++){
             sum+=i
         }
-        //res.send only accept string data
-        res.send(sum.toString())
+        message = sum.toString()
     }
-    res.send('Wrong Parameter')
-        
+    else
+        message = 'Wrong Parameter'
+    
+   res.render('responce', {message})
 })
+
+//Assignment 4: cookies
+
+app.get('/myName', (req, res)=>{
+    res.send('Bella')
+})
+
 
 
 app.listen(3000, ()=>{
