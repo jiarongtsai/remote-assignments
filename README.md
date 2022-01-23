@@ -14,11 +14,11 @@
 1. 接受使用者的輸入，而後根據輸入內容回應相應的畫面。
 2. 利用cookies記錄使用者的名字。
 
-- Install
+Install
 
 1.開啟終端機(Terminal)，在自行設定好的資料夾，`clone`此專案機至本機電腦:
 ```
-https://github.com/jiarongtsai/remote-assignments.git
+git clone https://github.com/jiarongtsai/remote-assignments.git
 ```
 
 2.前進week-3 資料夾
