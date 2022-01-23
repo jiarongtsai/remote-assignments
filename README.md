@@ -1,6 +1,7 @@
 # remote-assignments
 
 **week-1+2 RWD page**
+
 本專案是基本的RWD+DOM的練習專案，
 以mobile-first的概念開發，應用flex-box/media query的技術實現RWD，
 並透過addEventListener監聽使用者的行為，在點擊漢堡選單/按鈕/Banner的時候有相應的變化。
