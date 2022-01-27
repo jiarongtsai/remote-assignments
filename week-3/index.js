@@ -35,7 +35,7 @@ app.get('/getData', (req, res)=>{
     else
         message = 'Wrong Parameter'
     
-   res.render('responce', {message})
+   res.render('response', {message})
 })
 
 //Assignment 4: cookies
