@@ -25,8 +25,23 @@ xhr.onreadystatechange = ()=>{
     if (xhr.readyState === 4) {  
         if (xhr.status === 200) {
             const data = JSON.parse(xhr.responseText)
-            console.log(data)
-            myDiv.innerHTML = data[0]
+            const myDiv = document.querySelector('#myDiv')
+            
+            data.forEach( async(element) => {
+
+                const container = document.createElement('div')
+                const name = document.createElement('h1')
+                const description = document.createElement('p')
+                const price = document.createElement('span')
+
+                name.innerHTML = await element.name
+                description.innerHTML = await element.description
+                price.innerHTML = await element.price
+
+                container.append(name, description, price)
+                myDiv.append(container) 
+            });
+
         }
     }
 }
