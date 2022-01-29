@@ -14,15 +14,15 @@ function ajax(src, callback){
     xhr.send()
 }
 function render(data){
-    data.forEach( async(element) => {
+    data.forEach( (element) => {
         const container = document.createElement('div')
         const name = document.createElement('h1')
         const description = document.createElement('p')
         const price = document.createElement('span')
 
-        name.textContent = await element.name
-        description.textContent = await element.description
-        price.textContent = await element.price
+        name.textContent = element.name
+        description.textContent = element.description
+        price.textContent = `$${element.price}`
 
         container.append(name, description, price)
         myDiv.appendChild(container) 
