@@ -7,15 +7,39 @@
     <title>SUM</title>
 </head>
 <body>
-    <form action="/getData">
+    <form action="javascript:void(0);" >
         <label for="number"><h1>Enter a number:</h1></label>
         <input type="text" name="number" id="number">
-        <button type="submit">Submit</button>
+        <button onclick="ajaxRequest()">Submit</button>
     </form>
+    <br/>
+    <div id="result">Waiting for valid input...</div>
     <br/>
     <a href="/">Back</a>
     <footer>
         <p>:)</p>
     </footer>
+    <script>
+
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange=()=>{
+            if(xhr.readyState === 4){ 
+                let number = document.getElementById('number').value
+                if(Number(xhr.responseText)){
+                    document.getElementById('result').innerHTML= 
+                    `the result of adding 1 to ${number} is ${xhr.responseText}.`
+                }else{
+                    document.getElementById('result').innerHTML= xhr.responseText
+                }
+                
+            }
+        }
+
+        function ajaxRequest(){
+            let number = document.getElementById('number').value
+            xhr.open('GET', `/getData?number=${number}` )
+            xhr.send()
+        }
+    </script>
 </body>
 </html>

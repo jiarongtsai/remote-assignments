@@ -19,23 +19,20 @@ app.get('/getData', (req, res)=>{
     //get the query sting
     const input = req.query.number
     const num = Number(input)
-    //variable for store data
-    let message =''
-    
+
     //main logic
     if(!input)
-        message = 'Lack of Parameter'
+        res.send('Lack of Parameter')
     else if(num > 0){
         let sum =0
         for(let i = 0; i<=num; i++){
             sum+=i
         }
-        message = sum.toString()
+        res.send(sum.toString())
     }
     else
-        message = 'Wrong Parameter'
-    
-   res.render('response', {message})
+    res.send('Wrong Parameter')
+
 })
 
 //Assignment 4: cookies
