@@ -6,6 +6,8 @@
 以mobile-first的概念開發，應用flex-box/media query的技術實現RWD，
 並透過addEventListener監聽使用者的行為，在點擊漢堡選單/按鈕/Banner的時候有相應的變化。
 
+---
+
 **week-3 Basic Express App**
 
 本專案是使用Express.js框架建立的應用程式，主要有兩個功能：
@@ -36,6 +38,7 @@ node index.js
 
 終端顯示 `The server is listening on port 3000.` 即啟動完成，請至[http://localhost:3000](http://localhost:3000)開始使用程式
 
+---
 
 **week-4 RWD page with react**
 
