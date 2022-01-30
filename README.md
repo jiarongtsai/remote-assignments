@@ -5,8 +5,6 @@
 本專案是基本的RWD+DOM的練習專案，
 以mobile-first的概念開發，應用flex-box/media query的技術實現RWD，
 並透過addEventListener監聽使用者的行為，在點擊漢堡選單/按鈕/Banner的時候有相應的變化。
-[專案網址](https://jiarongtsai.github.io/remote-assignments/)
-
 
 **week-3 Basic Express App**
 
@@ -39,3 +37,6 @@ node index.js
 終端顯示 `The server is listening on port 3000.` 即啟動完成，請至[http://localhost:3000](http://localhost:3000)開始使用程式
 
 
+**week-4 RWD page with react**
+將第一週的專案用React框架實作
+[專案網址](https://jiarongtsai.github.io/remote-assignments/)
